@@ -1,0 +1,638 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap')
+
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:"Poppins",sans-serif;
+} 
+
+html{
+    scroll-behavior: smooth; 
+    
+}
+
+body{
+    overflow-x: hidden;
+}
+
+
+
+section{
+    width: 100%;
+    height: 100vh;
+}
+
+section nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position:fixed; 
+    right: 0;
+    left: 0;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0,0,0.5);
+    z-index: 1000;
+
+
+}
+
+section nav .logo img{
+    width: 100px;
+    cursor: pointer;
+    margin: 7px 0;
+
+
+}
+
+section nav ul{
+    list-style-type: none;
+}
+
+section nav ul li{
+    display:inline-block;
+    margin: 0 15px;
+
+} 
+
+section nav ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+section nav ul li a::after{
+    content: '';
+    width:0;
+    height: 2px;
+    background:#fac031;
+    display: block;
+    transition: 0.2s linear;
+
+}
+
+section nav ul li a:hover::after{
+   width: 100%;
+
+}
+
+section nav li a:hover{
+    color: #fac031;
+}
+
+section nav .icon i{
+    font-size: 18px;
+    color: #000;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    
+    
+}
+
+section nav .icon i:hover{
+    color: #fac031;
+
+}
+
+
+
+
+section .main{
+     display: flex; 
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+     top:60px; 
+}
+
+section .main .main-text h1{
+    color: #000;
+    font-size:50px;
+    position: relative;
+    top: -25px;
+    left: 5%;
+}
+
+section .main .main-text h1 span{
+    
+    color:#facc22;
+    font-family:cursive;
+}
+
+section .main .main-text p{
+    color: #000;
+    width: 650px;
+    position: relative;
+    top:20px;
+    left: 5%;
+    line-height:25px;
+    text-align: justify;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+/* -------------------------- */
+
+section .main .main-text .btn{
+    margin-right: 8px;
+    bottom: 20px;
+}
+
+section .main .main-text .btn {
+    color: #000;
+    text-decoration: none;
+    border: 2px solid #facc22;
+    padding: 10px 20px;
+    position: relative;
+    top: 100px;
+    left: 5%;
+    transition: 0.3s;
+}
+section .main .main-text .btn:hover{
+    color:white;
+}
+
+section .main .main-text .btn::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #facc22;
+    z-index: -1;
+    transition: 0.3s;
+}
+
+
+section .main .main-text .btn:hover::before{
+
+    top: unset;
+    width: 100%;
+    bottom: 0;
+    
+}
+
+
+
+/* custom scrollbar */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:white;
+}
+
+
+::-webkit-scrollbar-thumb{
+    background: #facc22;
+    border-radius: 10px;
+}
+
+
+
+/* -------------------- */
+
+section .main .main-image img{
+    width:600px;
+    animation: animate 5s linear infinite;
+}
+
+/* ------ about us */ 
+
+.about{
+    width: 100%;
+    height: 100vh;
+    padding: 10px 0 0;
+    background-image:url(Image/about_bg.jpg); 
+    background-position: center;
+    background-size: cover;
+        
+}
+
+.about .about-main{
+     display: flex;
+     align-items:center;
+     justify-content:space-around;
+     position: relative;
+}
+
+.about .about-main .about-image img{
+    width: 700px;
+}
+
+.about .about-main .about-text h1{
+    font-size: 45px;
+    position: relative;
+     bottom:40px;
+     
+}
+.about .about-main .about-text h1 span{
+    color:#facc22;
+    margin-right: 15px;
+}
+
+.about .about-main .about-text h3{
+    position: relative;
+    bottom:10px;
+    font-size: 25px;
+       
+}
+
+.about .about-main .about-text p{
+    width: 650px;
+    text-align: justify;
+    margin-top: 20px;
+    line-height: 23px;
+}
+
+.about .about-main .about-text .about-services{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr;
+     
+}
+
+.about .about-main .about-text .about-services .s-1{
+    display: flex;
+    align-items: center;
+    width: 180px;
+    background: #ececec;
+    padding: 10px;
+    border: 2px solid #facc22;
+    cursor: pointer;
+}
+
+.about .about-main .about-text .about-services .s-1 i{
+    color: #000;
+    margin: 5px 10px 5px 5px;
+    transition: 0.3s;
+
+}
+
+
+.about .about-main .about-text .about-services .s-1:hover i{
+    color:#facc22;
+
+}
+
+
+.about .about-main .about-text .about-services .s-1 a{
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+}
+
+.about .about-main .about-text .about-btn i{
+    font-size: 15px;
+    margin-right:8px;
+}
+
+.about .about-main .about-text .about-btn{
+    position: relative;
+    top: 35px;
+    padding:10px 20px;
+    border: 2px solid #facc22;
+    text-decoration: none;
+    color: #000;
+    z-index: 5;
+    transition:0.3s;
+}
+
+.about .about-main .about-text .about-btn:hover{
+    color: white;
+}
+
+.about .about-main .about-text .about-btn::before{
+    content: '';
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    z-index: -1;
+    background: #facc22;
+    transition: 0.3s;
+}
+
+.about .about-main .about-text .about-btn:hover::before{
+    top: unset;
+    width: 100%;
+    bottom: 0;
+}
+
+
+/* menu */
+
+ .menu{
+    width: 100%;
+    padding:70px 0; 
+    margin-left:30px;
+    
+}
+
+
+.box{
+    width:300px;
+    height:auto;
+    border: 2px solid black;
+    text-align: center;
+     padding:10px;
+     margin: 30px 0 0 34px;
+     display: inline-block;  
+     margin-right:10px;
+}
+
+.h1{
+    text-align: center;
+    font-size:40px;
+}
+
+.h1 span{
+    color:#facc22;
+    font-family: cursive;
+    font-size:50px;
+}
+
+.menu-btn{
+    color:black;
+    
+    text-decoration: none;
+}
+.menu-btn:hover{
+    cursor: pointer;
+    background-color: #facc22;
+}
+
+.box img:hover{
+     
+    transform: scale(1.1);
+    opacity: 0.6;
+    
+    
+}
+
+.box h2{
+    color: #fac031;
+}
+
+
+.menu-icon{
+    color: #fac031;
+    cursor: pointer;
+}
+
+.menu-icon a{
+    text-decoration: none;
+    padding: 5px 40px;
+    border: 1px solid black;
+    color:white;
+    background-color: #000;
+    font-size:18px;
+    font-family:serif;
+    
+   
+}
+
+
+
+
+
+
+/* Banner */
+
+.banner{
+    width: 100%;
+    height: 50vh;
+    background-image: url(Image/banner.jpg);
+    background-position: center;
+    background-size: cover;
+    margin-left: 7px;
+}
+
+.banner h1{
+    color:#facc22;
+    font-size:60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding-top: 25px;
+}
+
+.marquee {
+    color:#eeeeee;
+    font-size: 20px;
+    font-family:'Times New Roman', Times, serif;
+}
+
+.banner .banner-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    margin: 0 auto;
+}
+.banner .banner-center h2{
+    font-size:40px;
+    margin-right: 25px;
+    color: #fff;
+    font-family: monospace;
+}
+
+
+
+/* gallary */
+.gallery-container {
+    
+    padding: 10px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap:wrap; 
+  
+  }
+
+ .gallery-container img{
+
+    width: 400px;
+    height: 300px;
+    border: 1px solid gray;
+    border-radius: 13px;
+    box-shadow: 4px 7px 7px 0 black;
+    margin: 10px;
+    transition: 400ms; 
+
+  }
+
+
+
+  .h2{
+    text-align: center;
+    font-size:55px;
+    
+  }
+
+  .h2 span{
+    color:#facc22;
+    font-size: 65px;
+    font-family:cursive;
+  }
+  
+  
+  .gallery-container img:hover {
+    opacity: 0.6; 
+    cursor: pointer; 
+  } 
+
+
+ /* Review */
+  .review{
+    width: 100%;
+    height: 100vh;
+    padding:70px 0;
+  }
+
+  .review h1{
+    font-size: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.review h1 span{
+    margin-left: 15px;
+    color: #fac031;
+    font-family:cursive;
+}
+
+.review .review-box{
+    width: 95%;
+    margin: 70px auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.review .review-box .review-card{
+    width: 300px;
+    box-shadow: 0 2px 8px rgba(0, 0,0,0.5);
+    border-radius: 8px;
+    padding: 8px 20px;
+    margin: 0 8px;
+}
+
+.review .review-box .review-card .review-profile{
+
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: 0.3s;
+
+}
+.review .review-box .review-card:hover .review-profile{
+    transform: translatey(-60px);
+}
+
+.review .review-box .review-card .review-profile img{
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    border: 5px solid #cccccc;
+}
+
+.review .review-box .review-card .review-text{
+    text-align: center;
+}
+
+.review .review-box .review-card .review-tex .name{
+    color: #000;
+    transition: 0.3s;
+}
+
+
+.review .review-box .review-card .review-text .review-icon{
+    color: #fac031;
+    transform: 0.3s;
+}
+
+
+.review .review-box .review-card:hover.review-text .review-icon{
+    transform: translateY(-30px);
+}
+
+/* footer */
+.footer-main{
+    width: 100%;
+    padding: 30px 0 0 20px;
+    background:rgba(0, 0,0,0.2);
+    border-radius: 10px 10px 10px 10px;
+  
+}
+
+.footer-main{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    
+}
+
+ .footer-main .footer-tag{
+    text-align: center;
+
+}
+
+.footer-main .footer-tag h2{
+    color: #000;
+    margin-bottom: 25px;
+    font-size: 30px;
+    cursor: pointer;
+}
+ .footer-main .footer-tag p{
+    margin: 10px 0;
+    
+    
+
+}
+
+.footer-main .footer-tag p:hover{
+    color:white;
+    /* background-color:#facc22; */
+    cursor:pointer;
+    
+
+}
+
+ .footer-main .footer-tag i{
+    margin: 0 5px;
+    cursor: pointer;
+    font-size: 20px;
+}
+ .footer-main .footer-tag i:hover{
+    color:blue;
+}
+
+
+
+@keyframes animate {
+    0%{
+        transform: scale(1.1);
+    }
+    50%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.1);
+    }
+   
+} 
+
+

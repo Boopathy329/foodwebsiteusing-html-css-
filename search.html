@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+  <style>
+    .search-wrapper {
+  position: relative; /* Needed for absolute positioning */
+  display: inline-block; /* Inline for better placement */
+}
+
+.search-icon {
+  /* Style your search icon here (font size, color, etc.) */
+  cursor: pointer; /* Display pointer on hover */
+}
+
+.search-input {
+  width: 150px; /* Adjust width as needed */
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  position: absolute; /* Make it absolute for positioning */
+  top: 100%; /* Position below the search icon */
+  left: 0;
+  display: none; /* Initially hidden */
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%; /* Position below the search bar */
+  left: 0;
+  background-color: #fff;
+  list-style: none; /* Remove default list styling */
+  padding: 0;
+  display: none; /* Initially hidden */
+}
+
+.search-wrapper:hover .search-input,
+.search-wrapper:hover .dropdown-menu {
+  display: block; /* Show on hover over search icon */
+}
+
+.dropdown-menu li {
+  padding: 5px 10px;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer; /* Display pointer for list items */
+}
+
+.dropdown-menu li:hover {
+  background-color: #f1f1f1; /* Highlight on hover */
+}
+
+  </style>
+
+    <div class="search-wrapper">
+        <i class="search-icon"></i>  <input type="text" placeholder="Search" class="search-input">
+        <div class="dropdown-menu">
+          <ul>
+            <li>Search Term 1</li>
+            <li>Search Term 2</li>
+            <li>Search Term 3</li>
+          </ul>
+        </div>
+      </div>
+      
+</body>
+</html>
